@@ -4,11 +4,13 @@
   <meta charset="UTF-8">
   <title>SmartPhone Hub</title>
   <style>
+    /* Base Styles */
     body {
       font-family: Arial, sans-serif;
       margin: 0;
       padding: 0;
       background-color: #f4f4f9; /* soft gray background */
+      color: #333;
     }
     header {
       background-color: #1a73e8; /* blue header */
@@ -66,6 +68,107 @@
       padding: 15px;
       margin-top: 20px;
     }
+
+    /* ======================
+       10 CSS Exercises
+    =======================*/
+
+    /* 1. Styling a Page Header */
+    h1 {
+      color: red;
+      text-align: center;
+      font-family: Arial, sans-serif;
+    }
+
+    /* 2. Creating a Highlight Class */
+    .highlight {
+      font-weight: bold;
+      background-color: yellow;
+      font-size: 20px;
+    }
+
+    /* 3. Box Model Practice */
+    .box-practice {
+      margin: 20px;
+      padding: 10px;
+      border: 2px solid black;
+    }
+
+    /* 4. Responsive Design */
+    @media (max-width: 600px) {
+      body {
+        background-color: lightblue;
+      }
+    }
+
+    /* 5. Background Image */
+    .banner {
+      background-image: url('https://images.pexels.com/photos/607812/pexels-photo-607812.jpeg');
+      background-repeat: no-repeat;
+      background-size: cover;
+      height: 250px;
+      border-radius: 8px;
+      margin: 20px;
+    }
+
+    /* 6. Transition Effect */
+    button.transition-btn {
+      background-color: blue;
+      color: white;
+      border: none;
+      padding: 10px 16px;
+      border-radius: 6px;
+      transition: background-color 0.5s ease;
+    }
+    button.transition-btn:hover {
+      background-color: green;
+    }
+
+    /* 7. Absolute vs Relative Positioning */
+    .relative-box {
+      position: relative;
+      width: 200px;
+      height: 150px;
+      background: #a0c4ff;
+      margin: 20px auto;
+      border-radius: 8px;
+    }
+    .absolute-box {
+      position: absolute;
+      top: 30px;
+      left: 30px;
+      width: 100px;
+      height: 70px;
+      background: #ffadad;
+      border-radius: 8px;
+    }
+
+    /* 8. Using Different CSS Units */
+    .px-text { font-size: 16px; }
+    .em-text { font-size: 1.5em; }
+    .rem-text { font-size: 1.5rem; }
+
+    /* 9. Grid or Flex Layout */
+    .two-column {
+      display: flex;
+      gap: 20px;
+      justify-content: center;
+      align-items: center;
+      margin: 20px auto;
+    }
+    .two-column > div {
+      flex: 1;
+      background: #ffffff;
+      padding: 10px;
+      border-radius: 8px;
+      box-shadow: 0px 2px 5px rgba(0,0,0,0.1);
+    }
+
+    /* 10. Color Formats */
+    .color-rgb { color: rgb(255, 0, 0); }
+    .color-hex { color: #00ff00; }
+    .color-hsl { color: hsl(240, 100%, 50%); }
+
   </style>
 </head>
 <body>
@@ -81,10 +184,13 @@
     </nav>
   </header>
 
+  <!-- Background Banner (Exercise 5) -->
+  <div class="banner"></div>
+
   <!-- Main Content -->
   <main id="home">
     <h2>Welcome to SmartPhone Hub</h2>
-    <p>Your one-stop online store for the latest smartphones at unbeatable prices.</p>
+    <p class="highlight">Your one-stop online store for the latest smartphones at unbeatable prices.</p>
     <img src="https://images.pexels.com/photos/1092644/pexels-photo-1092644.jpeg" alt="Latest Smartphone" width="300">
     <p>Check out our exclusive collection of the newest devices with amazing discounts!</p>
     <a href="https://github.com/yourusername" target="_blank">Visit my GitHub</a>
@@ -94,16 +200,16 @@
   <section id="features">
     <h2>Our Services</h2>
     <ul>
-      <li>Latest flagship smartphones</li>
-      <li>Budget-friendly options</li>
-      <li>Free nationwide delivery</li>
+      <li class="color-rgb">Latest flagship smartphones</li>
+      <li class="color-hex">Budget-friendly options</li>
+      <li class="color-hsl">Free nationwide delivery</li>
       <li>One-year warranty on all phones</li>
       <li>24/7 customer support</li>
     </ul>
   </section>
 
-  <!-- Product Showcase Table -->
-  <section id="products">
+  <!-- Product Showcase Table with Box Model Example -->
+  <section id="products" class="box-practice">
     <h2>Top Selling Phones</h2>
     <table>
       <caption>Phone Price List</caption>
@@ -124,13 +230,25 @@
         <td>$899</td>
       </tr>
     </table>
+
+    <!-- Flex Layout + Positioning Example -->
+    <div class="two-column">
+      <div class="relative-box">
+        <div class="absolute-box"></div>
+      </div>
+      <div>
+        <button class="transition-btn">Buy Now</button>
+      </div>
+    </div>
   </section>
 
   <!-- Tutorial Video -->
   <section>
     <h2>Phone Buying Guide</h2>
-<iframe width="560" height="315" src="https://www.youtube.com/embed/ignyvfn-gAY?si=hRCSf3Qa6-eM7FT3" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-       <p>This video explains how to choose the right smartphone based on your budget and needs.</p>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/ignyvfn-gAY?si=hRCSf3Qa6-eM7FT3" title="YouTube video player" frameborder="0" allowfullscreen></iframe>
+    <p class="px-text">This video explains how to choose the right smartphone based on your budget and needs.</p>
+    <p class="em-text">Watch this guide to make a smart purchase!</p>
+    <p class="rem-text">Compare phones before buying for maximum satisfaction.</p>
   </section>
 
   <!-- Footer -->
@@ -141,3 +259,4 @@
 
 </body>
 </html>
+
